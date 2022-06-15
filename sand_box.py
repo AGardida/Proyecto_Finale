@@ -12,12 +12,11 @@ web3=Web3(Web3.HTTPProvider(ganache_url))
 print(web3.isConnected())
 
 account=["0xbcCB9F299c7f61e67f52799742d06555F68B6bCB","0x2325Df5634Cc650B88792Ef6B3a71b2f18E57Ca0","0x982ea450c84E5dC50489eb4AA3f317bCf4b30f1d","0x7768c40B5dF6B5F69e4E32db875a49a35f5f0dD8"]
-print(account[1])
 private_key1="48234d1e10180d6fb140cebf43138058e924a6aab679c4f6f1d96e3cf45907a7"
 private_key2="e2d51e78916454c61b814bc22c70ea031c49100896d42ae09af26ff198fbe95d"
-abi= json.loads('[{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"Micro","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"Vehicle_by_No","outputs":[{"internalType":"uint256","name":"startTime","type":"uint256"},{"internalType":"uint256","name":"duration","type":"uint256"},{"internalType":"uint256","name":"vehicleId","type":"uint256"},{"internalType":"string","name":"driverName","type":"string"},{"internalType":"uint256","name":"cost","type":"uint256"},{"internalType":"uint256","name":"sits","type":"uint256"},{"internalType":"address payable","name":"driver","type":"address"},{"internalType":"address payable","name":"client","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"ckeckBid","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"i","type":"uint256"}],"name":"getDataDriver","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"string","name":"","type":"string"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"getDriversList","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getNoDrivers","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_driver","type":"string"},{"internalType":"uint256","name":"_cost","type":"uint256"},{"internalType":"uint256","name":"_sits","type":"uint256"},{"internalType":"uint256","name":"_Id","type":"uint256"},{"internalType":"uint256","name":"_start","type":"uint256"},{"internalType":"uint256","name":"_duration","type":"uint256"}],"name":"publicDrive","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]')
+abi= json.loads('[{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"Micro","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"Vehicle_by_No","outputs":[{"internalType":"uint256","name":"startTime","type":"uint256"},{"internalType":"uint256","name":"duration","type":"uint256"},{"internalType":"uint256","name":"vehicleId","type":"uint256"},{"internalType":"string","name":"driverName","type":"string"},{"internalType":"uint256","name":"cost","type":"uint256"},{"internalType":"uint256","name":"sits","type":"uint256"},{"internalType":"address payable","name":"driver","type":"address"},{"internalType":"address payable","name":"client","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"uint256","name":"_index","type":"uint256"}],"name":"agreementTerminated","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"ckeckBid","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"i","type":"uint256"}],"name":"getDataDriver","outputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"string","name":"","type":"string"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"getDriversList","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getNoDrivers","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"string","name":"_driver","type":"string"},{"internalType":"uint256","name":"_cost","type":"uint256"},{"internalType":"uint256","name":"_sits","type":"uint256"},{"internalType":"uint256","name":"_Id","type":"uint256"},{"internalType":"uint256","name":"_start","type":"uint256"},{"internalType":"uint256","name":"_duration","type":"uint256"}],"name":"publicDrive","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]')
 bytecode='60806040526004361061004a5760003560e01c806306fdde031461004f57806365e0c006146100df578063964de5b21461010a578063bcc2b2f8146101dc578063f40e03c21461020a575b600080fd5b34801561005b57600080fd5b5061006461030a565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100eb57600080fd5b506100f46103a8565b6040518082815260200191505060405180910390f35b34801561011657600080fd5b506101da6004803603604081101561012d57600080fd5b810190808035906020019064010000000081111561014a57600080fd5b82018360208201111561015c57600080fd5b8035906020019184600183028401116401000000008311171561017e57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803590602001909291905050506103ae565b005b610208600480360360208110156101f257600080fd5b81019080803590602001909291905050506105c0565b005b34801561021657600080fd5b506102436004803603602081101561022d57600080fd5b8101908080359060200190929190505050610973565b60405180868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183151515158152602001828103825286818151815260200191508051906020019080838360005b838110156102cb5780820151818401526020810190506102b0565b50505050905090810190601f1680156102f85780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a05780601f10610375576101008083540402835291602001916103a0565b820191906000526020600020905b81548152906001019060200180831161038357829003601f168201915b505050505081565b60015481565b60008251116103bc57600080fd5b600081116103c957600080fd5b6001600081548092919060010191905055506040518060a0016040528060015481526020018381526020018281526020013373ffffffffffffffffffffffffffffffffffffffff16815260200160001515815250600260006001548152602001908152602001600020600082015181600001556020820151816001019080519060200190610458929190610a6e565b506040820151816002015560608201518160030160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060808201518160030160146101000a81548160ff0219169083151502179055509050507f24bcf511e8f50e673b8455c9fb8ebd0be7f6a47b7ec63917b271fa1c9dbd9bad600154838333600060405180868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183151515158152602001828103825286818151815260200191508051906020019080838360005b8381101561057e578082015181840152602081019050610563565b50505050905090810190601f1680156105ab5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390a15050565b6105c8610aee565b600260008381526020019081526020016000206040518060a001604052908160008201548152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106895780601f1061065e57610100808354040283529160200191610689565b820191906000526020600020905b81548152906001019060200180831161066c57829003601f168201915b50505050508152602001600282015481526020016003820160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020016003820160149054906101000a900460ff1615151515815250509050600081606001519050816040015134101561072957600080fd5b81608001511561073857600080fd5b33826060019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff1681525050600182608001901515908115158152505081600260008581526020019081526020016000206000820151816000015560208201518160010190805190602001906107bb929190610a6e565b506040820151816002015560608201518160030160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060808201518160030160146101000a81548160ff0219169083151502179055509050508073ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050158015610876573d6000803e3d6000fd5b507f328f818e79da4f486e43e65bde3bc51c97a9d9ccf7881e7721241401ff34da2d6001548360200151846040015133600060405180868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183151515158152602001828103825286818151815260200191508051906020019080838360005b83811015610930578082015181840152602081019050610915565b50505050905090810190601f16801561095d5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390a1505050565b6002602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610a255780601f106109fa57610100808354040283529160200191610a25565b820191906000526020600020905b815481529060010190602001808311610a0857829003601f168201915b5050505050908060020154908060030160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060030160149054906101000a900460ff16905085565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610aaf57805160ff1916838001178555610add565b82800160010185558215610add579182015b82811115610adc578251825591602001919060010190610ac1565b5b509050610aea9190610b35565b5090565b6040518060a00160405280600081526020016060815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681526020016000151581525090565b610b5791905b80821115610b53576000816000905550600101610b3b565b5090565b9056fea265627a7a723158207be18f32aaa5af893e878de7cd60b9b45d7d680dc4b0de13f6fad1471475440f64736f6c63430005110032'
-address=web3.toChecksumAddress("0xC1FDcC197FcB567717A25116620E8Ce987AC9323")
+address=web3.toChecksumAddress("0x4f39A6D8c327c3353B76ca79D4c7be1F37477aF4")
 Greeter = web3.eth.contract(abi=abi, bytecode=bytecode)
 contract=web3.eth.contract(
 	address=address,
@@ -266,31 +265,51 @@ def selection(ID):
         list_of_lines = file.readlines()
         file.close()
         #print(len(list_of_lines))
+        verif=True
+        for i in range(3):
+            if username1==account[i]:
+                verif=False
         lenn=len(list_of_lines)
-        for i in range(2,lenn):
-            iterr=contract.functions.getDataDriver(int(list_of_lines[i])).call()
-            summ=int(iterr[4])+int(iterr[5])
-            print(summ)
-            summ2=int(Data_driver[4])+int(Data_driver[5])
-            print(summ2)
-            if ((summ>=int(Data_driver[4])) and (int(iterr[4])<=summ2)):
-                print("No va")
-            else:
-                print("si va")
+        if (lenn==2 and verif==True):
+                print("eeeeentraaaaaaaaa")
                 signed_tx=web3.eth.account.signTransaction(tx,key)
                 tx_hash=web3.eth.sendRawTransaction(signed_tx.rawTransaction)
                 web3.eth.wait_for_transaction_receipt(tx_hash)
                 file = open("C:/Users/andre/OneDrive/Documentos/cryptho/Users/"+username1, "a") 
                 file.write(str(Data_driver[0]) + "\n")
                 file.close()
+                file = open("C:/Users/andre/OneDrive/Documentos/cryptho/Users/"+username1, "r")
+                list_of_lines = file.readlines()
+                file.close()
+                for i in range(2,len(list_of_lines)):
+                    rara=contract.functions.getDataDriver(int(list_of_lines[i])).call()
+                    labell=tk.Label(frame2,text="Travel with:"+str(rara[1])+" at "+ str(rara[4]))
+                    labell.pack()
+        else:
+            for i in range(2,lenn):
+                iterr=contract.functions.getDataDriver(int(list_of_lines[i])).call()
+                summ=int(iterr[4])+int(iterr[5])
+                print(summ)
+                summ2=int(Data_driver[4])+int(Data_driver[5])
+                print(summ2)
+                if ((summ>=int(Data_driver[4])) and (int(iterr[4])<=summ2) or verif==False):
+                    print("No va")
+                else:
+                    print("si va")
+                    signed_tx=web3.eth.account.signTransaction(tx,key)
+                    tx_hash=web3.eth.sendRawTransaction(signed_tx.rawTransaction)
+                    web3.eth.wait_for_transaction_receipt(tx_hash)
+                    file = open("C:/Users/andre/OneDrive/Documentos/cryptho/Users/"+username1, "a") 
+                    file.write(str(Data_driver[0]) + "\n")
+                    file.close()
         
-        file = open("C:/Users/andre/OneDrive/Documentos/cryptho/Users/"+username1, "r")
-        list_of_lines = file.readlines()
-        file.close()
-        for i in range(2,len(list_of_lines)):
-            rara=contract.functions.getDataDriver(int(list_of_lines[i])).call()
-            labell=tk.Label(frame2,text="Travel with:"+str(rara[1])+" at "+ str(rara[4]))
-            labell.pack()
+                    file = open("C:/Users/andre/OneDrive/Documentos/cryptho/Users/"+username1, "r")
+                    list_of_lines = file.readlines()
+                    file.close()
+                    for i in range(2,len(list_of_lines)):
+                        rara=contract.functions.getDataDriver(int(list_of_lines[i])).call()
+                        labell=tk.Label(frame2,text="Travel with:"+str(rara[1])+" at "+ str(rara[4]))
+                        labell.pack()
 
         smart_contract_screen_4.destroy()
 
@@ -343,7 +362,16 @@ def smart_contract_window_1():
     label=tk.Label(frame2,text="future")
     label.pack()
     No_drivers=contract.functions.getNoDrivers().call()
-    #web3.eth.wait_for_transaction_receipt(No_drivers)
+    
+    file = open("C:/Users/andre/OneDrive/Documentos/cryptho/Users/"+username1, "r")
+    list_of_lines = file.readlines()
+    file.close()
+    for i in range(2,len(list_of_lines)):
+        rara=contract.functions.getDataDriver(int(list_of_lines[i])).call()
+        labell=tk.Label(frame2,text="Travel with:"+str(rara[1])+" at "+ str(rara[4]))
+        labell.pack()
+    
+
     print('Updated greeting: {}'.format(contract.functions.getNoDrivers().call()))
     print(No_drivers)
     if No_drivers==0:
@@ -388,5 +416,4 @@ def smart_contracts():
 
 
 main_screen_window()
-
 
